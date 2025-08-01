@@ -1,0 +1,24 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container" style="max-width: 500px; margin-top: 40px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Add Doctor</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input type="text" class="form-control" id="mobile" name="mobile" required>
+        </div>
+        <div class="mb-3">
+            <label for="specialisation" class="form-label">Specialisation</label>
+            <input type="text" class="form-control" id="specialisation" name="specialisation" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Doctor</button>
+    </form>
+</div>
+{% endblock %}

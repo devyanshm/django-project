@@ -1,0 +1,41 @@
+{% extends "navbar.html" %}
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body %}
+   <div class = "container">
+        <h1 style="text-align: center; margin-top: 20px;">Doctor Details</h1>
+        <table class="table table-hover" style="margin-top: 20px;" id="example" >>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Contact</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doctor in doc %}
+                <tr>
+                    <td>{{ doctor.id }}</td>
+                    <td>{{ doctor.name }}</td>
+                    <td>{{ doctor.speciality }}</td>
+                    <td>{{ doctor.mobile }}</td>
+                    <td><a href="{% url 'delete_doctor' doctor.id %}" onclick="return confirm('are you sure u want to delete')" class="btn btn-danger">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+   </div>
+
+    {% endblock  %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block body %}
+
+{% if error == 'no' %}
+<script>
+    alert("Login successful");
+    window.location.href = "{% url 'index' %}";
+</script>
+{% endif %}
+<div style="margin: 0; padding: 0; background-color: #f0f2f5; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+  <div style="background-color: white; padding: 40px 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); width: 320px;">
+    <h2 style="text-align: center; margin-bottom: 10px;">hospi care</h2>
+    <p style="text-align: center; font-size: 14px; color: gray; margin-bottom: 25px;">Please enter your credentials</p>
+
+    <form action="/login/" method="post">
+      {% csrf_token %}
+      <label for="username">Username</label><br>
+      <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+        <a href="#" style="font-size: 12px; text-decoration: none; color: #007bff;">Forgot Password?</a>
+      </div>
+
+      <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px;">Login</button>
+    </form>
+  </div>
+</div>
+{% endblock body %}

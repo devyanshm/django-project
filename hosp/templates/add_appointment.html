@@ -1,0 +1,36 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container" style="max-width: 500px; margin-top: 40px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Add appoitmnet</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label >doctor</label>
+           <select name="doctor" id="doctor.id" class="form-control">
+            {% for i in doctor %}
+            <option value="{{i.id}}">{{i.name}} [{{i.id}}]</option>
+            {% endfor %}
+           </select>
+        </div>
+        <div class="mb-3">
+            <label >patient</label>
+             <select name="patient" id="patient.id" class="form-control">
+            {% for i in patient %}
+            <option value="{{i.id}}">{{i.name}} [{{i.id}}]</option>
+            {% endfor %}
+           </select>
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">date</label>
+            <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="mb-3">
+            <label for="time" class="form-label">time</label>
+            <input type="time" class="form-control" id="time" name="time" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add patient</button>
+    </form>
+</div>
+{% endblock %}
