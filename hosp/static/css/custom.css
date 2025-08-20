@@ -1,0 +1,35 @@
+/* Custom Animations and Styles for Hospital Management System */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.btn-animated {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-animated:hover {
+  background: #0056b3;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.table-fade {
+  animation: fadeIn 0.8s ease;
+}
+.icon-animated {
+  transition: transform 0.2s;
+}
+.icon-animated:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+.alert-animated {
+  animation: fadeIn 0.7s ease;
+}

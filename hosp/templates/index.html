@@ -3,24 +3,24 @@
 {% block body %}
 <div style="display: flex; flex-direction: column; align-items: center; min-height: 80vh; padding-top: 60px; background: #f8f9fa;">
     <h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; font-size: 2.8rem; font-weight: 700; color: #343a40; margin-bottom: 30px;">Admin Dashboard</h1>
-    <div style="display: flex; gap: 40px; margin-top: 30px;">
-        <div style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 16px; padding: 32px 40px; text-align: center; min-width: 220px;">
+    <div style="display: flex; gap: 40px; margin-top: 30px;" class="fade-in">
+        <div class="card-hover fade-in" style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 16px; padding: 32px 40px; text-align: center; min-width: 220px;">
             <span style="font-size: 2.5rem; color: #007bff; display: block; margin-bottom: 10px;">
-                <i class="fas fa-user-md"></i>
+                <i class="fas fa-user-md icon-animated"></i>
             </span>
             <div style="font-size: 1.2rem; color: #555; margin-bottom: 8px;">Doctors</div>
             <div style="font-size: 2.2rem; font-weight: 600; color: #007bff;">{{ doctor_count }}</div>
         </div>
-        <div style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 16px; padding: 32px 40px; text-align: center; min-width: 220px;">
+    <div class="card-hover fade-in" style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 16px; padding: 32px 40px; text-align: center; min-width: 220px;">
             <span style="font-size: 2.5rem; color: #28a745; display: block; margin-bottom: 10px;">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-users icon-animated"></i>
             </span>
             <div style="font-size: 1.2rem; color: #555; margin-bottom: 8px;">Patients</div>
             <div style="font-size: 2.2rem; font-weight: 600; color: #28a745;">{{ patient_count }}</div>
         </div>
-        <div style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 16px; padding: 32px 40px; text-align: center; min-width: 220px;">
+    <div class="card-hover fade-in" style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 16px; padding: 32px 40px; text-align: center; min-width: 220px;">
             <span style="font-size: 2.5rem; color: #ffc107; display: block; margin-bottom: 10px;">
-                <i class="fas fa-calendar-check"></i>
+                <i class="fas fa-calendar-check icon-animated"></i>
             </span>
             <div style="font-size: 1.2rem; color: #555; margin-bottom: 8px;">Appointments</div>
             <div style="font-size: 2.2rem; font-weight: 600; color: #ffc107;">{{ appointment_count }}</div>

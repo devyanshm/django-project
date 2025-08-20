@@ -11,7 +11,7 @@
     {% block body %}
    <div class = "container">
         <h1 style="text-align: center; margin-top: 20px;">Doctor Details</h1>
-        <table class="table table-hover" style="margin-top: 20px;" id="example" >>
+    <table class="table table-hover table-fade" style="margin-top: 20px;" id="example" >
             <thead>
                 <tr>
                     <th>ID</th>
@@ -28,7 +28,7 @@
                     <td>{{ doctor.name }}</td>
                     <td>{{ doctor.speciality }}</td>
                     <td>{{ doctor.mobile }}</td>
-                    <td><a href="{% url 'delete_doctor' doctor.id %}" onclick="return confirm('are you sure u want to delete')" class="btn btn-danger">Delete</a></td>
+                    <td><a href="{% url 'delete_doctor' doctor.id %}" onclick="return confirm('are you sure u want to delete')" class="btn btn-danger btn-animated">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

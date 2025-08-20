@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block body %}
-<div class="container" style="max-width: 500px; margin-top: 40px;">
+<div class="container fade-in" style="max-width: 500px; margin-top: 40px;">
     <h2 style="text-align: center; margin-bottom: 30px;">Add appoitmnet</h2>
     <form method="post" action="">
         {% csrf_token %}
@@ -30,7 +30,7 @@
             <label for="time" class="form-label">time</label>
             <input type="time" class="form-control" id="time" name="time" required>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Add patient</button>
+    <button type="submit" class="btn btn-primary w-100 btn-animated">Add patient</button>
     </form>
 </div>
 {% endblock %}
